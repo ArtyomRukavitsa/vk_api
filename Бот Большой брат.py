@@ -5,9 +5,9 @@ import random
 
 def main():
     vk_session = vk_api.VkApi(
-        token='00f4f1e4cf2c90d11f2187ceadd0a22fb6e2695192c3b7e3917eaa4db82ebcbe67f287eec70f43a856749')
+        token=TOKEN)
     # токен к моему сообществу
-    longpoll = VkBotLongPoll(vk_session, '193173683')  # id сообщества
+    longpoll = VkBotLongPoll(vk_session, id)  # id сообщества
     for event in longpoll.listen():
         if event.type == VkBotEventType.MESSAGE_NEW:
             print(event)
